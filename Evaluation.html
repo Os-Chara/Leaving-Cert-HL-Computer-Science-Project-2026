@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Computer Science project 2026 </title>
+    <link rel="stylesheet" href="style2.css">
+  </head>
+  <header>
+    <h1> Computer Science 2026 </h1>
+	<h3 style = "color: white"> Evaluation </h3>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Meeting_Brief.html"> Meeting the Brief</a></li>
+      <li><a href="Investigation.html"> Investigation</a></li>
+      <li><a href="Plan and Design.html"> Plan and Design</a></li>
+      <li><a href="Create.html"> Create</a></li>
+	  <li><a href="Evaluation.html"> <u>Evaluation</u></a></li>
+	  <li><a href="Bibliography.html"> Bibliography</a></li>
+	  <li><a href="Word Count.html"> Word Count</a></li>
+
+    </ul>
+  </header>
+  
+  <body>  
+  <article class = "all-boxes">
+    <article class = "boxes">
+    <p>
+	<br>The final artefact successfully meets both the basic and advanced requirements of the brief. The embedded system collects temperature, humidity, and soil moisture in real time, runs a local risk model, and triggers a physical alert when thresholds are exceeded. The Python model retrieves this data wirelessly via HTTP, processes it into risk scores, runs two what-if scenarios, and visualises all three across comparative subplots. Together, these components form a complete, functional forest monitoring system. 
+
+	<br><br>However, several limitations are worth addressing. The wildfire risk model uses a weighted average of three variables, which assumes a linear relationship between inputs and overall risk. In reality, the interaction between temperature, humidity, and soil moisture is more complex; extremely high temperatures combined with low humidity create far greater risk than either factor alone would suggest. The weighting values (0.4, 0.3, 0.3) were also determined by reasoning rather than empirical data, meaning they may not accurately reflect real wildfire science. Additionally, the CSV file is overwritten each time the Pico is powered, meaning unsaved data is lost, which is a critical flaw for any real-world continuous monitoring deployment. 
+
+	<br><br>The soil moisture sensor is another point of weakness. Capacitive sensors can drift over time in outdoor conditions [20], and the calibration benchmarks used may not capture the full range of realistic forest soil conditions. 
+
+	<br><br>In future iterations, I would integrate a wind speed sensor [21] and replace the weighted average with the Canadian Forest Fire Weather Index[22], which uses wind speed as a core input alongside temperature, humidity, and precipitation, directly addressing both the missing variable and the unscientific weighting in a single change. Finally, replacing HTTP with HTTPS would be essential to protect transmitted sensor data from interception. 
+	</p>
+    </article>
+  </article>
+  </body>
+  <footer>
+  </footer>
+</html>

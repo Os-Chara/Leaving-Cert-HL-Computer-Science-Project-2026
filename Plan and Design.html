@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Computer Science project 2026 </title>
+    <link rel="stylesheet" href="style2.css">
+  </head>
+  <header>
+    <h1> Computer Science 2026 </h1>
+	<h3 style = "color: white"> Plan and Design </h3>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Meeting_Brief.html"> Meeting the Brief</a></li>
+      <li><a href="Investigation.html"> Investigation</a></li>
+      <li><a href="Plan and Design.html"> <u>Plan and Design</u></a></li>
+      <li><a href="Create.html"> Create</a></li>
+	  <li><a href="Evaluation.html"> Evaluation</a></li>
+	  <li><a href="Bibliography.html"> Bibliography</a></li>
+	  <li><a href="Word Count.html"> Word Count</a></li>
+
+    </ul>
+  </header>
+  <body>  
+  <article class = "all-boxes">
+    <article class = "boxes">
+      <h3>Design Objectives: </h3>
+	  <br>
+	  <p>
+	  The goal of this project is to design a forest monitoring system made up of an embedded system and a Python model which completes all the following objectives. 
+	  <br><br>
+	  </p>
+  <ul class="bullets-list">
+    <li>Operate as a tree-mounted embedded monitoring device. </li>
+    <li>Monitor temperature, humidity, and soil moisture using external sensors. </li>
+    <li>Be able to store the collected environmental data and run basic preprocessing. </li>
+    <li>Have a simple model programmed locally on the embedded system to calculate the wildfire risk. </li>
+    <li>Adapt automatically to changing environmental conditions and update wildfire risk at regular intervals.  </li>
+    <li>Include a Python program on a computer that can take the preprocessed data and run further modelling and visualisation of data.  </li>
+    <li>Allow patterns and trends in wildfire risk over time to be identified. </li>
+  </ul>
+    </article>
+	<article class = "boxes">
+	<h3>Stakeholders and End User Needs:  </h3>
+	<br>
+	<p>
+	This device’s primary stakeholders will be forest monitoring organisations. They require accurate and reliable environmental data and methods for predicting high-risk conditions. Monitoring an entire forest requires many devices distributed throughout the environment, so minimising the cost per unit is essential. Manually collecting the data from all these devices would be infeasible, so wirelessly transmitting this to their computers is essential. Many forests are vast in size, limiting the response times of these organisations to risks, so an automatic warning system will be needed. 
+	</p>
+	</article>
+	
+	<article class = "boxes">
+	<h3>Options to meet Design Objectives:   </h3>
+	<p>
+	<br>
+	<b>Option 1: Micro:Bit based system</b><br>
+	This design would use Micro:Bit to process sensor inputs and control the outputs, based on a simple local model.  
+    <br><br>
+	<b>Pros:</b>	
+	</p>
+    <ul class="bullets-list">
+      <li>Simple to program due to MakeCodes block-based programming language [11].  </li>
+	  <li>Crocodile clip connectors along with a built in LED display make testing and bug fixing easy.</li>
+	  <li>Built in radio communication modules would make transmitting the data to the computer for modelling simple [12].</li>
+	</ul>
+	<p><b>Cons:</b>
+	</p>
+	<ul class="bullets-list">
+      <li>Limited storage capabilities of 256KB would make storing large continuous datasets impractical [13].   </li>
+	  <li>Only 16KB of RAM are available, which would limit the complexity and speed of the local model [13]. </li>
+	  <li>Limited voltage output of 1.7V-3.6V [14]. </li>
+	  <li>Requires a breakout board for solid wiring, which uses up a lot of space.  </li>
+	  <li>Higher price point at €19.95 [15].  </li>
+	</ul>
+	<p>
+	<br><b>Option 2: Raspberry Pi Pico W based system</b>
+	<br>This design would make use of a Raspberry Pi Pico W for processing the inputs from the sensors, which would then be used to run a simple local model which would determine the outputs. 
+    <br><br>
+	<b>Pros:</b><br>	
+	</p>
+    <ul class="bullets-list">
+      <li>Greater storage capabilities of 2MB make continuous, large datasets more practical [16].  </li>
+	  <li>The 264KB of RAM allows faster processing and more complex local models [16].</li> 
+
+		<li>Multiple voltage outputs from 1.8V-5.5V, allow for a wider variety of hardware options [17].</li>	 
+
+		<li>The Pico W’s built in Bluetooth and Wi-Fi chip would allow for the wireless transfer of data from the Pico to the computer for modelling [18], albeit more complex than the radio modules on the Micro:Bit. </li>
+
+		<li>Low cost at only €4-6.</li>
+	</ul>
+	<p><b>Cons:</b>
+	</p>
+	<ul class="bullets-list">
+	  <li>No built in LED display means more external hardware is required if displaying information or debugging is required.  </li>
+	  <li>Requires MicroPython which is more complex than block programming. </li>
+	  
+	</ul>
+	<br>
+	<p>These two options were compared under the following criteria: </p>
+	<table style = "width: 100%">
+	<tr>
+      <th>Features</th>
+      <th>Micro:Bit</th>
+	  <th>Raspberry Pi Pico W</th>
+	</tr>
+	<tr>
+      <td>Programming Complexity </td>
+      <td>Low</td>
+	  <td>Medium</td>
+	</tr>
+	<tr>
+      <td>Storage </td>
+      <td>256KB </td>
+	  <td>2MB </td>
+	</tr>
+	<tr>
+      <td>RAM </td>
+      <td>16KB </td>
+	  <td>264KB </td>
+	</tr>
+	<tr>
+      <td>Cost </td>
+      <td>€19.95 </td>
+	  <td>€6 </td>
+	</tr>
+	<tr>
+      <td>Difficulty of Debugging </td>
+      <td>Low </td>
+	  <td>Medium</td>
+	</tr>
+	<tr>
+      <td>Wireless transmission </td>
+      <td>Radio modules </td>
+	  <td>Bluetooth and Wi-Fi chip </td>
+	</tr>
+	<tr>
+      <td>Available Voltages  </td>
+      <td>1.7V-3.6V </td>
+	  <td>1.8V-5.5V  </td>
+	</tr>
+    </table>
+	<br><p>
+	Based on this comparison, I chose the Raspberry Pi Pico for my final design. Despite the Micro:bit’s ease of programming and debugging, its limited storage and processing power make it an impractical choice for continuous monitoring and data processing. The Pico compensates for its greater overall complexity with significantly larger memory capacity, greater processing power, and a wider voltage range, while also being available at a lower cost. These advantages make it the most suitable platform for this project. </p>
+	</article>
+	
+	<article class = "boxes">
+	<h3>Technologies:   </h3>
+	<p>
+<br>Along with the Pico W the following hardware and software will be used. 
+
+<br><br><b>Thonny: </b>This Python IDE is ideal for programming both the model and the Pico. Its simple UI and built-in support for MicroPython make it easy to develop and test code. It also allows the Pico to print output directly to the shell through a serial connection, making debugging more convenient. 
+
+<br><b>Notepad++:</b> A lightweight text editor used for creating the HTML and CSS files for my website, with features such as syntax highlighting that improve readability. 
+
+<br><b>Fusion 360: </b> Free CAD software that will be used for designing an enclosure for the system components. 
+
+<br><b>Capacitive Soil Moisture Sensor: </b>Outputs the soil moisture level as an analogue value. Unlike resistive sensors with exposed metal probes, capacitive sensors avoid corrosion making them more long-lasting and sustainable. 
+
+<br><b>DHT22: </b>This is a cheap and easy to use digital temperature and air humidity sensor. Pre-made MicroPython libraries and higher accuracy over the DHT11 make it suitable for this project. 
+
+<br><b>Pico OLED 1.3 Display: </b>This device is designed specifically to compensate for the Pico’s lack of built in display. Pre-made libraries allow it to easily display live sensor data. 
+
+<br><b>Active Buzzer: </b>Active buzzers contain an internal oscillator unlike passive buzzers, meaning programming them is as simple as just supplying voltage. This makes them perfect for the alarm system. 
+
+<br><b>Red LED: </b> This will add to the system’s alarm feature, red is associated with danger and would stand out in a green forest environment.
+	</p>
+	</article>
+  
+  <figure class="diagram">
+  <h3>System Architecture</h3>
+  <img src="images/SytemArch.png" alt="System Architecture- in the event of an error the orignial image can be located in the images subfolder">
+  <figcaption>Figure 1: System Architecture of the Embedded System and Python Model</figcaption>
+  </figure>
+  <figure class="diagram">
+  <h3>Flowchart</h3>
+  <img src="images/model.drawio.png" alt="Model Flowchart- in the event of an error the orignial image can be located in the images subfolder">
+  <figcaption>Figure 2: Python Model Flowchart</figcaption>
+  </figure>
+  </article>
+  </body>
+  <footer>
+  </footer>
+</html>

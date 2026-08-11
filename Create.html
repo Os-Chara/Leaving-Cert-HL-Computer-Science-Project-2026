@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Computer Science project 2026 </title>
+    <link rel="stylesheet" href="style2.css">
+  </head>
+  <header>
+    <h1> Computer Science 2026 </h1>
+	<h3 style = "color: white"> Creation </h3>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Meeting_Brief.html"> Meeting the Brief</a></li>
+      <li><a href="Investigation.html"> Investigation</a></li>
+      <li><a href="Plan and Design.html"> Plan and Design</a></li>
+      <li><a href="Create.html"> <u>Create</u></a></li>
+	  <li><a href="Evaluation.html"> Evaluation</a></li>
+	  <li><a href="Bibliography.html"> Bibliography</a></li>
+	  <li><a href="Word Count.html"> Word Count</a></li>
+
+    </ul>
+  </header>
+  
+  <body>  
+<article class="all-boxes">
+	
+<article class="boxes" style="padding-right: 30px;">
+  <h3>Key Milestones</h3>
+  <div style="display:flex; gap:60px; align-items:flex-start; text-align:left;">
+  <div>
+    <br><h4><u>Embedded System:</u></h4>
+	<p>
+	<b>Milestone-1:</b> The DHT22 and capacitive soil moisture sensor were connected to the Raspberry Pi Pico W on a breadboard, with readings printed directly to the Thonny shell via serial connection. 
+
+	<br><b>Test: </b>Conditions were manually altered by breathing on the DHT22 and submerging the soil moisture sensor to verify both sensors were responding accurately to real environmental changes. 
+
+	<br><br><b>Milestone-2:</b> I soldered stackable headers to the Pico W, as the OLED display covered all pins, allowing simultaneous attachment of all components. 
+
+	<br><b>Test: </b>A multimeter was used to verify continuity across each solder joint, the components were then wired, and sensor data was printed to the OLED display to confirm functionality. 
+
+	<br><br><b>Milestone-3: </b>I designed a custom enclosure in Fusion 360 with precise measurements for my components, which I then 3D printed. 
+
+	<br><b>Test: </b>I printed the smallest piece first so I could identify structural issues to rectify. 
+
+	<br><br><b>Milestone-4:</b> Components were wired and assembled into their final positions. 
+
+	<br><b>Test:</b> A MicroPython test script was run to confirm all components were wired and functioning correctly. 
+
+	<br><br><b>Milestone-5:</b> I created algorithms to identify the relative risk level from each of my variables in Python. Each function was designed to return a probabilistic value between 0 and 1 using exponential formulas derived from Desmos. 
+
+	<br><b>Test: </b>Each function was tested by using known benchmark values. For soil moisture, physical benchmarks were established by submerging the sensor in water, and wet and dry soil. These readings were then used to calibrate the function so that risk output corresponded accurately to real world conditions. Similarly for humidity, readings under typical conditions were used to get a baseline, and readings in humid and dry environments found the range for the function. 
+
+	<br><br><b>Milestone-6: </b>An overall risk level was then found by creating a weighted average of the 3 variables. When the risk passes a certain threshold, the buzzer and LED activate. 
+
+	<br><b>Test: </b>Using a hair dryer and soil samples of varied moisture, I verified that the warning system would only activate in extreme conditions. 
+	<figure class="diagram">
+		<img src="images/progression.png" alt="progression ">
+		<figcaption>Fig.10 - Progression</figcaption>
+	</figure>
+	</p>
+
+	<br><h4><u>Disaster Model</u></h4>
+	<p>
+	<b>Milestone-1: </b>A data retrieval system was built to request CSV data from the Pico W via HTTP over WiFi and store it locally. 
+
+	<br><b>Test: </b>The Pico's IP address was identified using a MicroPython script, and correct data formatting was confirmed by printing received rows to the shell.
+
+	<br><br><b>Milestone-2: </b>What-if scenarios were developed by altering variables to simulate climate change and drought conditions. 
+
+	<br><b>Test:</b> Scenarios were tested using simulated datasets to confirm expected changes in risk output. 
+
+	<br><br><b>Milestone-3: </b>A graphing function was created to visualise all three scenarios across three subplots without repeating code. 
+
+	<br><b>Test:</b> Various tuples containing mixtures of the data from different scenarios were inputted to verify it can handle varied data. 
+	
+	<figure class="diagram">
+		<img src="images/graph.png" alt="graph ">
+		<figcaption>Fig.14 - sub-graph popup</figcaption>
+		
+		<img src="images/tuples.png" alt="tuples ">
+		<figcaption>Fig.15 - Milestone 3: defined tuples</figcaption>
+	</figure>
+	</p>
+	</div>
+    <div style="display:flex; flex-direction:column; gap:5px; max-width:240px;">
+      <figure class="diagram">
+        <img src="images/Milestone 1.jpeg" alt="Circuit at milestone 1">
+        <figcaption>Fig.3 - Milestone 1: prototype</figcaption>
+      
+        <img src="images/comparsion.png" alt="Milestone 2">
+        <figcaption>Fig.4 - Milestone 2: stack headers</figcaption>
+		
+        <img src="images/CADrender.png" alt="Milestone 3 ">
+        <figcaption>Fig.5 - Milestone 3: rendered CAD model </figcaption>
+		
+		<img src="images/printing.jpeg" alt="Milestone 3 ">
+        <figcaption>Fig.6 - Milestone 3: 3D printing enclosure </figcaption>
+		
+        <img src="images/Assem no wires.jpeg" alt="Milestone 4">
+        <figcaption>Fig.7 - Milestone 4: Components in place </figcaption>
+		
+        <img src="images/components.jpeg" alt="Milestone 4">
+        <figcaption>Fig.8 - Milestone 4: Wiring complete</figcaption>
+		
+		<img src="images/moisture-test.jpeg" alt="Milestone 5 ">
+        <figcaption>Fig.9 - Milestone 5: Calibrating moisture formula</figcaption>
+		
+		<img src="images/IPaddressFinderSnip.png" alt="Milestone 1 ">
+        <figcaption>Fig.11 - Milestone 1: IP address finder code</figcaption>
+		
+		<img src="images/original graphing code.png" alt="Milestone 1">
+        <figcaption>Fig.12 - Milestone 3: original graphing code</figcaption>
+		
+		<img src="images/GraphingFunction.png" alt="Milestone 1 ">
+        <figcaption>Fig.13 - Milestone 3: graphing function</figcaption>
+		
+      </figure>
+    </div>
+  </div>
+</article>
+
+<article class="boxes" style="padding-right: 30px;">
+  <h3>Problem Encountered:</h3>
+  <br>
+  <div style="display:flex; gap:60px; align-items:flex-start; text-align:left;">
+  <div>
+    <p>
+	During an early iteration of my code, I attempted to assign a risk level to the temperature using a threshold system. My goal was to create a system where a small increase in temperature had little effect on risk at low temperatures but a greater increase per degree at higher temperatures. 
+	<br>In this regard my code worked well, but I noticed the problem when I graphed temperature risk; the level would remain horizontal before jumping up or down. This was detrimental as it greatly reduced precision.  
+
+	<br><br>I identified that an exponential function would have the desired characteristics with more precision. I went onto desmos.com [19] an online graphing calculator to create a formula with the following characteristics.
+	</p>
+	<br>
+	<ul class="bullets-list" style ="text-align: left; padding-left: 10px">
+	  <li>The output should be clamped between 0 and 1 to give a probabilistic risk value.</li>
+	  <li> Risk should be negligible under 17.5°C; high average temperature in Ireland.</li>
+	  <li> It should accelerate in the mid-twenties; uncommonly hot summer weather. </li>
+	  <li>It should then max out as it reaches the thirties; hottest heat wave weather.</li>
+	</ul>
+
+	<p><br><br>The final formula I developed was: 	<br><br>Risk = (1.2^(x-17.5))/10	<br>0 ≤ Risk ≤ 1 </p>
+  </div>
+    <div style="display:flex; flex-direction:column; gap:0px; max-width:220px;">
+      <figure class="diagram">
+        <img src="images/threshholds.png" alt="thresholds">
+        <figcaption>Fig. 16 — Threshold function</figcaption>
+      </figure>
+      <figure class="diagram">
+        <img src="images/thresholds graph.jpeg" alt="thresholds graph">
+        <figcaption>Fig. 17 — Threshold graph</figcaption>
+      </figure>
+      <figure class="diagram">
+        <img src="images/DESMOStemp.png" alt="Desmos graph">
+        <figcaption>Fig. 18 — Exponential formula</figcaption>
+      </figure>
+    </div>
+  </div>
+</article>
+	<article class="boxes" style="padding-right: 30px;">
+	  <h3>Description of Model:  </h3>
+	  <br>
+	  <div style="display:flex; gap:60px; align-items:flex-start; text-align:left;">
+	  <div>
+	  <p>
+The user is first asked to select what dataset they wish to use. If one of the locally stored datasets is selected, it is immediately loaded. If they select “request new data”, the model reads the data directly from the Pico via http over WiFi and stores it locally. 
+<br><br> 
+Three individual risk functions convert each raw sensor value into a probabilistic risk score between 0 and 1. Temperature risk increases exponentially above 17.5°C using the formula Risk = (1.2^(x-17.5))/10, reflecting Ireland's climate where significant wildfire risk only emerges at uncommonly high temperatures. Humidity risk uses an exponential decay formula, where risk falls as humidity rises above 70%. Similarly, soil moisture risk decreases exponentially as readings rise, indicating wetter soil conditions. All three functions clamp their output between 0 and 1.
+<br><br>
+These three values are then combined into an overall wildfire risk factor using a weighted average, with temperature weighted most heavily at 0.4, and humidity and soil moisture each weighted at 0.3, reflecting temperature's dominant role in wildfire risk. 
+<br><br> 
+The model then produces two what-if scenarios. The first simulates a climate change projection by increasing temperature by 4°C. The second simulates drought conditions by reducing air humidity by 15% and soil moisture by 7.5%. The data for each of the 3 scenarios are saved in 3 tuples, allowing the same graphing function to be reused for all scenarios.
+<br><br>
+Each tuple is unpacked and inserted into the graph function one by one, from which 3 subplots are created to display overall risk, the raw sensor values, and the risk level by variable. The mean risk of each of the scenarios are calculated, compared, and printed. 
+<br><br>
+	  </p>
+	  
+	  </div>
+	</div>
+	</article>
+</article>
+    
+  </body>
+  <footer>
+  </footer>
+</html>

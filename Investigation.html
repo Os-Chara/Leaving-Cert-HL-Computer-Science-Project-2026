@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Computer Science project 2026 </title>
+    <link rel="stylesheet" href="style2.css">
+  </head>
+  <header>
+    <h1> Computer Science 2026 </h1>
+	<h3 style = "color: white"> Investigation </h3>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Meeting_Brief.html"> Meeting the Brief</a></li>
+      <li><a href="Investigation.html"> <u>Investigation</u></a></li>
+      <li><a href="Plan and Design.html"> Plan and Design</a></li>
+      <li><a href="Create.html"> Create</a></li>
+	  <li><a href="Evaluation.html"> Evaluation</a></li>
+	  <li><a href="Bibliography.html"> Bibliography</a></li>
+	  <li><a href="Word Count.html"> Word Count</a></li>
+
+    </ul>
+  </header>
+  
+  <body>  
+	<article class = "all-boxes">
+	  <article class = "boxes">
+      <h3>Initial Research: </h3>
+	  <br>
+	  <p>The initial stages of this project involved my own research into the project brief, in order to gain a clearer understanding of its technical requirements. The brief is focused on the development of an embedded system for forest monitoring. Modern forest monitoring relies heavily on environmental sensors to track conditions and combat threats such as wildfires and biodiversity loss.  
+	  </p>
+	  </article>
+	<br>
+	<article class = "boxes">
+	  <h3>Specific Research – Wildfires: </h3>
+	  <br>
+	  <p>In recent years Ireland has seen a dramatic and worrying increase in the number of wildfires each year. According to an EU commission report from 2023[1], 117 fires were mapped in Ireland that year burning over 5,000 hectares of land [2]. In 2011 Irish wildfires were visible from space, images of these were acquired by NASA using the MODIS satellite [3]. Many scientists suggest that wildfires have “close links to patterns of climate change” [4]. Climate projections suggest that global average temperature could rise 4°C above pre-industrial levels by the end of the century [5]. This will only accelerate Ireland’s already worrying rate of wildfires.  
+	  </p>
+	  </article>
+	<br>
+	<article class = "boxes">
+	  <h3>Existing Solutions:  </h3>
+	  <br>
+	  <p>Many technologies already exist to combat this issue; solutions range from satellite imaging to track the spread of fires and predict their paths to AI-powered early warning systems that analyse various pieces of environmental data to predict fires before they even start. 
+
+<br>The Canadian government uses a network of specialised satellites to track designated “Fire M3 hotspots”. These are 1km² pixels within satellite images showing high infrared activity [6]. This system is used to track fire intensity, the direction of its spread, and the total area affected [7]. This information helps evacuate civilians and assists emergency services responding to wildfires.  
+
+<br>However, a major drawback of these systems comes from the fact they can only detect a fire after it is already ignited and grown sizable, unlike smaller sensor-based systems.  
+
+One such system is Dryad’s Silvanet [8]. This is a network of tree mounted sensors which collect various pieces of environmental data such as air humidity, air quality, temperature, and the presence of gases indicating a fire. These small sensors each have their own local built in AI which analyses the data in real time to give “ultra early detection” [9]. 
+	  </p>
+	</article>
+	<br>
+	<article class = "boxes">
+	  <h3>Considerations on my project:  </h3>
+	  <br>
+	  <p>I was intrigued by the concept of a small tree-mounted wildfire sensor system with continuous, real-time analysis of conditions as the foundation for my project. I was able to determine the three most vital factors in predicting wildfires [10], these being temperature, air humidity, and the moisture level of vegetation, which can be estimated through soil moisture. A DHT22 and soil moisture sensors could collect all these variables, and a Micro:Bit or a Raspberry Pi Pico would be perfect for collecting and processing this data. A Python model could then project wildfire risks based on these variables.     </p>
+	</article>
+	</article>
+  </body>
+  <footer>
+  </footer>
+</html>

@@ -1,0 +1,153 @@
+body {
+  background-color: #e6f0ec;
+  margin: 0;
+  font-family: Times New Roman, Times, serif;
+  color: black;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+h2 {
+  color: black;
+  text-align: center;
+}
+
+h3 {
+  color: black;
+  text-align: center;
+}
+
+p {
+  text-align: left;
+  line-height: 1.6;
+  max-width: 1000px;
+  margin: 10px auto;
+}
+
+header {
+  background-color: #2f5d50;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #e6f0ec;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #ddd;
+}
+
+ul li {
+  margin: 0;
+}
+
+ul li a {
+  display: block;
+  color: #2c3e50;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+ul li a:hover {
+  background-color: #4f8a6b;
+  transition: background-color 0.2s ease;
+}
+
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+footer {
+  background-color: #2f5d50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+table, th, td {
+  border:1px solid black;
+  border-collapse: collapse;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  background-color: white;
+  padding: 5px;
+
+}
+
+.all-boxes {
+  margin: 0;
+  padding: 10px;
+  background-color: #e6f0ec;
+}
+
+.all-boxes > h2, .boxes {
+  margin: 10px;
+  padding: 5px;
+}
+
+.boxes {
+  background: white;
+  max-width: 1000px;   
+  margin: 10px auto; 
+  padding: 40px;
+  padding-top: 20px;
+  border-radius: 10px;
+}
+
+.boxes > h3, .boxes > p {
+  margin: auto;
+  color: black;
+  text-align: left;
+}
+
+.bullets-list {
+  list-style-type: disc; 
+  background-color: transparent;
+  margin: 10px;
+  padding-left: 40px;
+  display: block; 
+  border-bottom: none;
+  
+}
+
+.bullets-list li {
+  background-color: transparent;
+  margin-bottom: 5px;
+  color: black;
+}
+.diagram {
+  margin: 5px auto;
+  text-align: center;
+}
+
+.diagram img {
+  background: white;
+  border: 2px solid #444;
+  padding: 2px;
+  border-radius: 6px;
+  max-width: 100%;
+}
+
+.diagram figcaption {
+  margin-top: 1px;
+  font-size: 0.6em;
+  font-style: italic;
+  color: #444;
+}
