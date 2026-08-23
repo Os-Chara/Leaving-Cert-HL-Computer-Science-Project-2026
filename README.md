@@ -1,5 +1,5 @@
 # Leaving-Cert-HL-Computer-Science-Project-2026
-This is my LC Computer Science project from the 2025-2026 academic year. The project focused on embedded systems and computer modeling. My project was a tree-mounted wildfire monitoring system created with a Raspberry Pi Pico W, and a python based model graphed using matplotlib.
+This is my LC Computer Science project from the 2025-2026 academic year, from which I received a H1. The project focused on embedded systems and computer modeling. My project was a tree-mounted wildfire monitoring system created with a Raspberry Pi Pico W, and a python based model graphed using matplotlib.
 
 To view the project open through "index.html" and navigate from there.
 
